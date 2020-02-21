@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- META TAG -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- BS4 -->
+	<title>My Portofolio</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<div class="fixed-top">
+		<nav class="navbar navbar-light bg-primary" style="opacity: 0.7">
+		  <a class="nav-item btn text-white" href="#" role="button">YP</a>
+		  <div class="float-right">
+		  	<a class="nav-item btn text-white" href="#project" role="button">Project</a>
+		  	<a class="nav-item btn text-white" href="#about" role="button">About</a>
+		  	<a class="nav-item btn text-white" href="#contact" role="button">Contact</a>
+		  </div>
+		</nav>
+	</div>
+	<!-- Header -->
+	<header class="m-0">
+		<div class="carousel">
+			<div class="carousel-inner">
+			    <div class="carousel-item active">
+			    	<img src="img/header/second.jpg" class="mw-100" alt="Laptop Header">
+			    	<div class="carousel-caption">
+			    		<h3 class="text-uppercase text-danger">
+			    			sedang dalam pengembangan
+			    		</h3>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		<!-- <img src="../img/second.jpg" class="mw-100" height="auto" alt="Laptop Header"> -->
+	</header>
+	<!-- Main -->
+	<main class="p-4">
+		<!-- Project -->
+		<div class="py-5" id="project">
+			<h3 class="text-monospace">Projects</h3>
+			<hr>
+			<div class="row row-cols-1 row-cols-md-2">
+				<!-- Website -->
+				<div class="col my-2">
+			        <div class="card">
+			        	<div class="card-header bg-primary">
+			        		<h5 class="text-center text-white">Website</h5>
+			        	</div>
+			        	<!-- Slide Gambar -->
+				      	<div id="carouselWeb" class="carousel slide" data-ride="carousel">
+				      		<ol class="carousel-indicators">
+				      			<li data-target="#carouselWeb" data-slide-to="0" class="active"></li>
+				      			<li data-target="#carouselWeb" data-slide-to="1"></li>
+				      			<li data-target="#carouselWeb" data-slide-to="2"></li>
+				      		</ol>
+				      		<div class="carousel-inner" role="listbox">
+				      			<div class="carousel-item active">
+				      				<a href="#" target="_blank">
+				      					<img src="img/projects/second.jpg" class="card-img-top mw-100" alt="First slide">
+				      				</a>
+				      			</div>
+				      			<div class="carousel-item">
+				      				<a href="#">
+				      					<img src="img/projects/utama.jpg" class="card-img-top mw-100" alt="Second slide">
+				      				</a>
+				      			</div>
+				      			<div class="carousel-item">
+				      				<a href="#">
+				      					<img src="img/projects/second.jpg" class="card-img-top mw-100" alt="Third slide">
+				      				</a>
+				      			</div>
+				      		</div>
+				      	 	<!-- Icon -->
+				      	 	<a class="carousel-control-prev" href="#carouselWeb" role="button" data-slide="prev">
+				      	 		<span class="carousel-control-prev-icon"></span>
+				      	 	</a>
+				      	 	<a class="carousel-control-next" href="#carouselWeb" role="button" data-slide="next">
+				      	 		<span class="carousel-control-next-icon"></span>
+				      	 	</a>
+				      	</div>
+				      	<!-- Teks -->
+				      	<div class="card-body">
+				      		<div class="card-text">
+				      			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit modi veritatis aspernatur excepturi earum ea quia repellat, animi minima? Minima veritatis ipsa, recusandae odio esse saepe, repudiandae magni est atque?
+				      		</div>
+				      	</div>
+			        </div>
+				</div>
+				<!-- Aplikasi-->
+				<div class="col my-2">
+				    <div class="card">
+				    	<div class="card-header bg-primary">
+			        		<h5 class="text-center text-white">Aplikasi</h5>
+			        	</div>
+			        	<!-- Slide Gambar -->
+				      	<div id="carouselApps" class="carousel slide" data-ride="carousel">
+				      		<ol class="carousel-indicators">
+				      			<li data-target="#carouselApps" data-slide-to="0" class="active"></li>
+				      			<li data-target="#carouselApps" data-slide-to="1"></li>
+				      			<li data-target="#carouselApps" data-slide-to="2"></li>
+				      		</ol>
+				      		<div class="carousel-inner" role="listbox">
+				      			<div class="carousel-item active">
+				      				<a href="#">
+				      					<img src="img/projects/utama.jpg" class="card-img-top mw-100" alt="First slide">
+				      				</a>
+				      			</div>
+				      			<div class="carousel-item">
+				      				<a href="#">
+				      					<img src="img/projects/second.jpg" class="card-img-top mw-100" alt="Second slide">
+				      				</a>
+				      			</div>
+				      			<div class="carousel-item">
+				      				<a href="#">
+				      					<img src="img/projects/utama.jpg" class="card-img-top mw-100" alt="Third slide">
+				      				</a>
+				      			</div>
+				      		</div>
+				      		<!-- Icon -->
+				      		<a class="carousel-control-prev" href="#carouselApps" role="button" data-slide="prev">
+				      			<span class="carousel-control-prev-icon"></span>
+				      		</a>
+				      		<a class="carousel-control-next" href="#carouselApps" role="button" data-slide="next">
+				      			<span class="carousel-control-next-icon"></span>
+				      		</a>
+				      	</div>
+				      	<!-- Teks -->
+				      	<div class="card-body">
+				      		<div class="card-text">
+				      			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit modi veritatis aspernatur excepturi earum ea quia repellat, animi minima? Minima veritatis ipsa, recusandae odio esse saepe, repudiandae magni est atque?
+				      		</div>
+				     	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- About -->
+		<div class="py-5" id="about">
+			<h3 class="text-monospace">Siapa saya ?</h3>
+			<hr>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam optio tenetur, ducimus tempore dolore distinctio atque fugiat delectus quos temporibus. Consequuntur, commodi maxime amet doloremque voluptate nulla recusandae. Nostrum, tenetur?
+			</p>
+			<!-- Skills -->
+			<div class="py-3">
+				<h4 class="text-monospace">Skils</h4>
+			</div>
+			<div class="pb-3">
+				<h5 class="font-italic">Apps Mobile developer</h5>
+				<div class="progress">
+					<div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+						<span class="text-center text-white">
+							50%
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="pb-3">
+				<h5 class="font-italic">Database</h5>
+				<div class="progress">
+					<div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+						<span class="text-center text-white">
+							25%
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="pb-3">
+				<h5 class="font-italic">Design</h5>
+				<div class="progress">
+					<div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+						<span class="text-center text-white">
+							10%
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="pb-3">
+				<h5 class="font-italic">Web developer</h5>
+				<div class="progress">
+					<div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+						<span class="text-center text-white">
+							30%
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- CV -->
+			<div class="py-4">
+				<a class="btn btn-primary d-block" href="#">
+					<img src="img/about/file.png" alt="Download" width="25px">
+				Download CV
+				</a>
+			</div>
+		</div>
+		<!-- Contact -->
+		<div class="py-5" id="contact">
+			<h3 class="text-monospace">Contact</h3>
+			<hr>
+			<div class="py-2">
+				<div class="mb-4">
+					<img src="img/contact/lokasi.png" alt="Lokasi" width="20px">
+					<span class="ml-2">Depok, Indonesia</span>
+				</div>
+				<div class="mb-4">
+					<a class="text-dark text-decoration-none" href="mailto:yogadwiprasetyo09@gmail.com">
+						<img src="img/contact/email.png" alt="Email" width="20px">
+						<span class="ml-2">yogadwiprasetyo09@gmail.com</span>
+					</a>
+				</div>
+				<div class="mb-4">
+					<a class="text-dark text-decoration-none" href="#" target="_blank">
+						<img src="img/contact/linkedin.png" alt="Linkedin" width="20px">
+						<span class="ml-2">yogadwiprasetyo</span>
+					</a>
+				</div>
+			</div>
+			<div class="py-2">
+				<p>Tertarik bekerja sama, kirim email:</p>
+				<form action="#">
+					<fieldset class="form-group">
+						<input type="text" class="form-control mb-3 py-4 px-4 border-primary" name="email" placeholder="Email">
+						<input type="text" class="form-control mb-3 py-4 px-4 border-primary" name="subject" placeholder="Subject">
+						<input type="text" class="form-control mb-2 py-4 px-4 border-primary" name="message" placeholder="Message">
+					</fieldset>
+					<button class="btn btn-outline-primary px-4 py-2" type="submit">
+						<span>
+							<img src="img/contact/send.png" alt="Send" width="25px">
+						</span>
+						Send Message
+					</button>
+				</form>
+			</div>
+		</div>
+	</main>
+	<!-- Footer -->
+	<footer class="m-0 mt-5 pt-4 pb-2 bg-light">
+		<div class="text-center">
+			<p>
+			<span class="px-1">
+			<a class="text-decoration-none" href="#" target="_blank">
+				<img src="img/footer/linkedin.png" alt="Linkedin" width="25px">
+			</a>
+			</span>
+			<span class="px-1">
+				<a class="text-decoration-none" href="https://github.com/yogadwiprasetyo" target="_blank">
+					<img src="img/footer/github.png" alt="Github" width="25px">
+				</a>
+			</span>
+			<span class="px-1">
+				<a class="text-decoration-none" href="https://www.instagram.com/ypsrty/" target="_blank">
+					<img src="img/footer/instagram.png" alt="Instagram" width="25px">
+				</a>
+			</span>
+			</p>
+			<p class="px-2">
+				Copyright &#169; 2020
+			</p>	
+		</div>
+	</footer>
+	
+	<!-- JS Jquery & Bootstrap 4 -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- DALAM PENGEMBANGAN
+	HEADER: posisi, opacity dan responsive
+	PROJECT: isi content gambar dan tulisan
+	ABOUT: konten tulisan, link ke file dan file CV
+	CONTACT: form yang masih banyak kurangnya 
+-->
