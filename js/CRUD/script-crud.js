@@ -47,13 +47,11 @@ function createData(data_store){
 		 	isiData.hasOwnProperty('angkatan')){
 			// data dibuat
 			data_store.push(isiData);
-			alert('Create Data Successful');
 			// kosongkan input value
 			for( let i = 0; i < form.length-1; i++ ){
 				form[i].value = '';
 			}
-			// sembunyikan form dan tampilkan data
-			// hideContent();
+			// tampilkan data
 			readData(data_store);
 		}else{
 			alert('Form cannot be empty');
