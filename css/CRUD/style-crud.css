@@ -1,0 +1,11 @@
+.hide {
+  display: none;
+}
+
+.btn {
+  transition: all .70s ease;   
+}
+
+.btn:hover {
+  box-shadow:  5px 5px 18px #6c757d;
+}
