@@ -5,23 +5,26 @@ var captionTable =  document.getElementsByTagName('caption')[0];
 
 // tempat penyimpanan data
 var Data_Store = [];
-
-function showContent(element){
-	$(element).show('slow');
-}
-
-function hideContent(element){
-	$(element).hide('slow');
+// handling content show & hide
+function handlingContent(element,action){
+	switch (action) {
+		case 'show':
+			$(element).show('slow');
+			break;
+		case 'hide':
+			$(element).hide('slow');
+			break;
+		default:
+			break;
+	}
 }
 
 // membuat data
 function createData(data_store){
 	// tutup semua table
-	hideContent(table);
-
+	handlingContent(table, 'hide');
 	// tampilkan form input
-	showContent(form);
-
+	handlingContent(form, 'show');
 	// ubah text button form
 	form[4].innerText = 'Create';
 
@@ -62,11 +65,9 @@ function createData(data_store){
 // menampilkan data
 function readData(data_store){
 	// tutup semua form
-	hideContent(form);
-
+	handlingContent(form, 'hide');
 	// ubah text caption table
 	captionTable.innerText = '';
-
 	// ambil table body
 	var tableBody = document.getElementsByTagName('tbody')[0];
 
@@ -86,10 +87,10 @@ function readData(data_store){
 		// gabungkan data dan element HTML ke table body
 		tableBody.innerHTML = txt;
 		// tampilkan data/table data
-		showContent(table);
+		handlingContent(table,'show');
 	} else {
 		alert('Data is empty !');
-		hideContent(table);
+		handlingContent(table, 'hide');
 	}
 }
 
@@ -97,12 +98,11 @@ function readData(data_store){
 function updateData(data_store){
 	// tampilkan data
 	readData(data_store);
-
 	// ubah text caption table
 	captionTable.innerText = 'Click Data For Updated';
-
 	// ambil semua data
 	var dataClick = document.getElementsByClassName('data');
+
 	// looping semua data
 	for( let i = 0; i < dataClick.length; i++ ){
 		// ketika data yang dipilih diklik, tampilkan confirm
@@ -112,13 +112,12 @@ function updateData(data_store){
 			if( answer === true ){
 				// ambil nomer data dan ubah text button form
 				var userUpdate = parseInt(dataClick[i].firstChild.innerText);
-				hideContent(table);
+				handlingContent(table, 'hide');
 				form[4].innerText = 'Update';
-				showContent(form);
+				handlingContent(form, 'show');
 				// ketika button form diklik, proses update data
 				form[4].onclick = function(){
 					// update data dengan input value yang baru
-					console.log(data_store[userUpdate-1]);
 					data_store[userUpdate-1]['nama'] = form[0].value;
 					data_store[userUpdate-1]['nim'] = form[1].value;
 					data_store[userUpdate-1]['jurusan'] = form[2].value;
@@ -140,16 +139,13 @@ function updateData(data_store){
 						for( let i = 0; i < form.length-1; i++ ){
 							form[i].value = '';
 						}
-						// tampilkan data dan sembunyikan form
+						// tampilkan data 
 						readData(data_store);
-						hideContent(form);
 						updateData(data_store);
 					}else{
 						alert('Form cannot be empty !');
 					}
 				};
-			} else {
-				console.log('Data not update');
 			}
 		};
 	}	
@@ -159,38 +155,32 @@ function updateData(data_store){
 function deleteData(data_store){
 	// tampilkan data
 	readData(data_store);
-
 	// ubah text caption table
 	captionTable.innerText = 'Click Data For Deleted';
-
 	// ambil semua data
 	var dataClick = document.getElementsByClassName('data');
-	// jika isi data lebih dari 0, proses data
-	if( data_store.length > 0 ){
-		// looping semua data
-		for( let i = 0; i < dataClick.length; i++ ){
-			// ketika data yang dipilih diklik, tampilkan confirm
-			dataClick[i].onclick = function(){
-				var answer = confirm('Delete Data ?');
-				// jika ok lakukan hapus data
-				if( answer === true ){
-					// ambil nomer data
-					var userDelete = parseInt(dataClick[i].firstChild.innerText);
-					// data dihapus
-					data_store.splice(userDelete - 1, 1);
-					dataClick[i].remove();
-					alert('Delete Successful');
-					// jika isi data 0, hanya tampilkan data
-					if( data_store.length === 0 ){
-						readData(data_store);
-					}else{
-						readData(data_store);
-						deleteData(data_store);
-					}
-				} else {
-					console.log('Data not update');
+
+	// looping semua data
+	for( let i = 0; i < dataClick.length; i++ ){
+		// ketika data yang dipilih diklik, tampilkan confirm
+		dataClick[i].onclick = function(){
+			var answer = confirm('Delete Data ?');
+			// jika ok lakukan hapus data
+			if( answer === true ){
+				// ambil nomer data
+				var userDelete = parseInt(dataClick[i].firstChild.innerText);
+				// data dihapus
+				data_store.splice(userDelete - 1, 1);
+				dataClick[i].remove();
+				alert('Delete Successful');
+				// jika isi data 0, hanya jalankan fungsi read data
+				if( data_store.length === 0 ){
+					readData(data_store);
+				}else{
+					readData(data_store);
+					deleteData(data_store);
 				}
-			};	
-		}
+			} 
+		};	
 	}
 }
