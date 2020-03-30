@@ -2,6 +2,7 @@
 var form = document.getElementsByClassName('hide-form')[0];
 var table = document.getElementsByClassName('hide-table')[0];
 var captionTable =  document.getElementsByTagName('caption')[0];
+var buttonForm = form[4];
 
 // tempat penyimpanan data
 var Data_Store = [];
@@ -26,10 +27,10 @@ function createData(data_store){
 	// tampilkan form input
 	handlingContent(form, 'show');
 	// ubah text button form
-	form[4].innerText = 'Create';
+	buttonForm.innerText = 'Create';
 
 	// ketika button diklik, buat data
-	form[4].onclick = function(){
+	buttonForm.onclick = function(){
 		// masukan input value ke Object
 		isiData = {
 			nama:form[0].value,
@@ -113,10 +114,15 @@ function updateData(data_store){
 				// ambil nomer data dan ubah text button form
 				var userUpdate = parseInt(dataClick[i].firstChild.innerText);
 				handlingContent(table, 'hide');
-				form[4].innerText = 'Update';
+				buttonForm.innerText = 'Update';
 				handlingContent(form, 'show');
+				// value data lama
+				form[0].value = data_store[userUpdate-1]['nama'];
+				form[1].value = data_store[userUpdate-1]['nim'];
+				form[2].value = data_store[userUpdate-1]['jurusan'];
+				form[3].value = data_store[userUpdate-1]['angkatan'];
 				// ketika button form diklik, proses update data
-				form[4].onclick = function(){
+				buttonForm.onclick = function(){
 					// update data dengan input value yang baru
 					data_store[userUpdate-1]['nama'] = form[0].value;
 					data_store[userUpdate-1]['nim'] = form[1].value;
