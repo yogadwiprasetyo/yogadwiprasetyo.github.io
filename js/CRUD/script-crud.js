@@ -14,7 +14,6 @@ function handlingDataAPI (result) {
 	$('#recovered').html(total_recovered);
 	$('#new-cases').html(total_new_cases);
 	$('#new-deaths').html(total_new_deaths)
-	console.log(result);
 }
 
 // Get data from API
