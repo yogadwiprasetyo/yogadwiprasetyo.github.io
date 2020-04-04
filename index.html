@@ -23,7 +23,7 @@
 	</div> -->
 	<!-- Header -->
 	<header class="m-0">
-		<div class="container py-5">
+		<div class="container py-3">
 			<div class="mb-4">
 				<img src="img/develop/pengembangan.svg" class="w-100" alt="Development">
 			</div>
@@ -33,7 +33,7 @@
 		</div>
 	</header>
 	<!-- Main -->
-	<main class="p-4">
+	<main class="container">
 		<!-- Project
 		<div class="py-5" id="project">
 			<h3 class="text-monospace">Projects</h3>
@@ -231,7 +231,54 @@
 				</form>
 			</div>
 		</div> -->
-		<div class="container">
+		
+		<!-- DATA COVID-19 -->
+		<div class="pb-4">
+			<hr>
+				<h1 class="text-center">Covid-19 Indonesia</h1>
+
+				<div id="data" class="row row-cols-md-3 my-3">
+					<div class="col">
+						<div class="text-center">
+							<p>Cases</p>
+							<h2 id="cases" class="text-primary"></h2>
+						</div>
+					</div>
+					<div class="col">
+						<div class="text-center">
+							<p>Deaths</p>
+							<h2 id="deaths" class="text-danger"></h2>
+						</div>
+					</div>
+					<div class="col">
+						<div class="text-center">
+							<p>Recovered</p>
+							<h2 id="recovered" class="text-success"></h2>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="text-center">
+							<p>New Cases Today</p>
+							<h2 id="new-cases" class="text-primary"></h2>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="text-center">
+							<p>New Deaths Today</p>
+							<h2 id="new-deaths" class="text-danger"></h2>
+						</div>
+					</div>
+				</div>
+
+				<p>source API: 
+					<a class="text-decoration-none" href="https://thevirustracker.com/" target="_blank">
+						The virus tracker
+					</a>
+				</p>
+			<hr>
+		</div>
+		
+		<!-- CRUD -->
 			<!-- Catatan -->
 			<div>
 				<p class="text-muted text-justify">note: The data that you created will not be saved, if you refresh this website the data will be automatically deleted.</p>
@@ -292,7 +339,6 @@
 				    </div>
 				</div>
 			</form>
-		</div>
 	</main>
 	<!-- Footer -->
 	<footer class="m-0 mt-5 pt-4 pb-2 bg-light">

@@ -1,3 +1,46 @@
+// API DATA COVID-19
+// Handling data from API
+function handlingDataAPI (result) {
+	// data from API
+	let total_cases = result['countrydata'][0]['total_cases'];
+	let total_deaths = result['countrydata'][0]['total_deaths'];
+	let total_recovered = result['countrydata'][0]['total_recovered'];
+	let total_new_cases = result['countrydata'][0]['total_new_cases_today'];
+	let total_new_deaths = result['countrydata'][0]['total_new_deaths_today'];
+
+	// taruh data ke html
+	$('#cases').html(total_cases);
+	$('#deaths').html(total_deaths);
+	$('#recovered').html(total_recovered);
+	$('#new-cases').html(total_new_cases);
+	$('#new-deaths').html(total_new_deaths)
+	console.log(result);
+}
+
+// Get data from API
+$(document).ready(function(){
+	// API data covid-19
+	const api = 'https://api.thevirustracker.com/free-api?countryTotal=ID';
+	// get data json from API
+	$.ajax({
+		url: api,
+		type: 'get',
+		dataType: 'json',
+		crossDomain: true
+	})
+	.done(function(result) {
+		console.log("success");
+		handlingDataAPI(result);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+});
+
+// CRUD
 // content form dan table
 var form = document.getElementsByClassName('hide-form')[0];
 var table = document.getElementsByClassName('hide-table')[0];
