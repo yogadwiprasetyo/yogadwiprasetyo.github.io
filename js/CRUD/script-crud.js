@@ -36,6 +36,7 @@ $(document).ready(function(){
 	})
 	.always(function() {
 		console.log("complete");
+		$('#corona').hide('slow');
 	});
 });
 
