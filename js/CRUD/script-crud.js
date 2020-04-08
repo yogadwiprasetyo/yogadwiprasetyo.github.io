@@ -33,10 +33,10 @@ $(document).ready(function(){
 	})
 	.fail(function() {
 		console.log("error");
+		$('#corona').hide('slow');
 	})
 	.always(function() {
 		console.log("complete");
-		$('#corona').hide('slow');
 	});
 });
 
