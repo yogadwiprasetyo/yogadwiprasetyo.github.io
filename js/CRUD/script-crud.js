@@ -1,12 +1,14 @@
 // API DATA COVID-19
 // Handling data from API
 function handlingDataAPI (result) {
-	// data from API
-	let total_cases = result['countrydata'][0]['total_cases'];
-	let total_deaths = result['countrydata'][0]['total_deaths'];
-	let total_recovered = result['countrydata'][0]['total_recovered'];
-	let total_new_cases = result['countrydata'][0]['total_new_cases_today'];
-	let total_new_deaths = result['countrydata'][0]['total_new_deaths_today'];
+	let get = result['countrydata'][0];
+
+	// ambil data dari JSON
+	let total_cases = get['total_cases'];
+	let total_deaths = get['total_deaths'];
+	let total_recovered = get['total_recovered'];
+	let total_new_cases = get['total_new_cases_today'];
+	let total_new_deaths = get['total_new_deaths_today'];
 
 	// taruh data ke html
 	$('#cases').html(total_cases);
@@ -16,7 +18,7 @@ function handlingDataAPI (result) {
 	$('#new-deaths').html(total_new_deaths)
 }
 
-// Get data from API
+// Show data from API
 $(document).ready(function(){
 	// API data covid-19
 	const api = 'https://api.thevirustracker.com/free-api?countryTotal=ID';
