@@ -31,9 +31,8 @@ $(document).ready(function(){
 	})
 	.done(function(result) {
 		console.log("success");
-		// console.log(result);
-		// handlingDataAPI(result);
-		$('#corona').hide('slow');
+		console.log(result);
+		handlingDataAPI(result);
 	})
 	.fail(function() {
 		console.log("error");
