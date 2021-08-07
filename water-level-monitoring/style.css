@@ -1,0 +1,40 @@
+/*Declaration font*/
+@font-face {
+  font-family: 'Leon Sans';
+  src: url('leon-sans/leon-sans/OTF/LeonSans-Regular.otf');
+}
+
+body {
+    font-family: 'Leon Sans';
+}
+
+.tank {
+    /* size */
+    width: 150px;
+    height: 250px;
+
+    /* colors */
+    position: relative;
+    border: 1px solid black;
+    background: white;
+}
+
+.tank .water {
+     /*color of water */
+    background: #04ACFF;
+    height: 0%;
+
+     /*water position */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#error, 
+#connecting,
+#success,
+#off,
+#first-distance
+ {
+    display: none;
+}

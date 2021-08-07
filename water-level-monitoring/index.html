@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <title>Water Level Monitoring</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+
+      <!-- Title Project -->
+      <h1>Water Level Monitoring</h1>
+
+      <!-- Description Project -->
+      <p>Projek ini merupakan implementasi dari Internet of Things untuk me-moniotring ketinggian air pada tempat tertentu. Semua data yang ditampilkan merupakan data real-time dari sensor ultrasonic yang dihubungkan ke platform ThingSpeak.</p>
+      <hr>
+      <p id="first-distance"></p>
+
+      <!-- Tank Water & Information -->
+      <div>
+        <div class="row">
+
+          <!-- First Column is Tank Water -->
+          <div class="col-12 col-md-auto">
+            <div class="tank">
+              <div class="water"></div>
+            </div>
+          </div>
+          <!-- End First Column -->
+
+          <!-- Second Column is Information from Tank Water -->
+          <div class="col-12 col-md-auto mt-3">
+
+            <!-- STATUS -->
+            <p>
+              <strong>Status IoT: </strong>
+              <span id="status" class="badge badge-danger">OFF</span>
+            </p>
+
+            <!-- POSITION -->
+            <p>
+              <strong>Position: </strong>
+              <span id="position" class="badge badge-success">Unknown</span>
+            </p>
+
+            <!-- VOLUME -->
+            <p>
+              <strong>Jarak air: </strong>
+              <span id="volume" class="badge badge-secondary">Unknown</span>
+            </p>
+
+            <!-- ALERT -->
+            <p>
+              <strong>Alert email: </strong>
+              <span id="email" class="badge badge-danger">Non-Active</span>
+            </p>
+
+            <!-- OTHER INFORMATION -->
+            <div>
+              <p><strong>pesan lainnya:</strong></p>
+              <div id="error" class="alert alert-danger" role="alert">
+                <span>Oops! There is something wrong.</span>
+              </div>
+              <div id="connecting" class="alert alert-warning" role="alert">
+                <span>Connecting ...</span>
+              </div>
+              <div id="success" class="alert alert-success" role="alert">
+                <span>Success connecting</span>
+              </div>
+              <div id="off" class="alert alert-info" role="alert">
+                <span>IoT is <strong>OFF</strong>, please come back later!</span>
+              </div>
+            </div>
+          </div> 
+          <!-- End Second Column -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Tank Water & Information -->
+
+      <hr>
+
+      <!-- Charts & Info Author -->
+      <div class="row">
+
+        <!-- Column Charts -->
+        <div class="col-12 col-md-auto">
+          <div>
+            <h3>Charts</h3>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1462518/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15&api_key=OJOHX0ZKR58DKOMJ"></iframe>
+          </div>
+        </div>
+        <!-- End Column Charts -->
+
+        <!-- Column Author -->
+        <div class="col-12 col-md-auto mt-5">
+          <div>
+            <h3 class="mb-4">Author</h3>
+            <p>Yoga Dwi Prasetyo <strong>197064516017</strong></p>
+            <p>sketch <a href="#">sketch-water-level-monitoring</a></p>
+            <p>code arduino <a href="#">code-arduino-water-level-monitoring</a></p>
+          </div>
+        </div>
+        <!-- End Column Charts -->
+      </div>
+      <!-- End Charts & Info Author -->
+    </div>
+
+    <!-- Jquery and Logic JS -->
+    <script src="./jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
